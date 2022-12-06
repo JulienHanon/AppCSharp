@@ -41,6 +41,7 @@ namespace Pendu
                 }
                 else if (result >= 0)
                 {
+                    //On verifie si la lettre a deja été utiliser pour afficher un message différent 
                     if (GoodGuess.Contains(Lettre)){
                         Console.WriteLine("Vous avez deja utiliser la lettre {0}.", Lettre);
                     }
@@ -50,9 +51,11 @@ namespace Pendu
                     }   
                    
                 }
-
+                
+                //On met a jour le mot que l'utilisateur est en train de deviner
                 currentWord = DisplayWordtoGuess(WordToGuess);
 
+                //Mise en place des conditions de victoire et de défaite
                 if (currentWord.IndexOf('_') == -1)
                 {
                     Console.WriteLine("Bravo vous avez trouvé !");
@@ -67,9 +70,12 @@ namespace Pendu
                 
             }
         }
+        //Fonction qui retourne le mot que l'utilisateur est en train de deviner
         public string DisplayWordtoGuess(string WordToGuess)
         {
             string currentWordGuessed = "";
+            // pour chaque lettre dans le mot a deviner on verifie si elle 
+            // correspond avec les lettres trouvé pour construire le mot
             foreach(char l in WordToGuess)
             {
                 if (GoodGuess.Contains(l))
@@ -88,6 +94,9 @@ namespace Pendu
 
             return currentWordGuessed;
         }
+
+        //Affichage du menu
+        
         public void StartGame()
         {
             while(!QuitGame)
@@ -101,6 +110,7 @@ namespace Pendu
 
                 char difficulty = Console.ReadKey(true).KeyChar;
 
+                //Les mots et le nombre d'erreurs sont différents en fonction de la difficulté seléctionné
                 switch (difficulty) {
                 case '&':  
                         Words.Add("Gourde");
