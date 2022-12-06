@@ -1,4 +1,5 @@
-﻿namespace Pendu 
+﻿using Pendu;
+namespace Main 
 {
     class Pendu
     {

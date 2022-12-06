@@ -9,7 +9,6 @@ namespace Pendu
         public bool QuitGame; // Si vrai alors on quitte l'application
         public int NbError; // Nombre de faute
         ArrayList Words = new ArrayList(); //Création d'une liste de mot possible
-        
         public string CurrentWord; // Affiche la mot que l'utilisateur est en train de deviner
 
         public void Play(int ErrorLeft, ArrayList Words)
@@ -53,10 +52,10 @@ namespace Pendu
                 }
                 
                 //On met a jour le mot que l'utilisateur est en train de deviner
-                currentWord = DisplayWordtoGuess(WordToGuess);
+                CurrentWord = DisplayWordtoGuess(WordToGuess);
 
                 //Mise en place des conditions de victoire et de défaite
-                if (currentWord.IndexOf('_') == -1)
+                if (CurrentWord.IndexOf('_') == -1)
                 {
                     Console.WriteLine("Bravo vous avez trouvé !");
                     EndGame = true;
