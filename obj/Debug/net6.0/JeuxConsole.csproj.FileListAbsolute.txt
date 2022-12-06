@@ -1,0 +1,15 @@
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/JeuxConsole.csproj.AssemblyReference.cache
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/JeuxConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/JeuxConsole.AssemblyInfoInputs.cache
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/JeuxConsole.AssemblyInfo.cs
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/JeuxConsole.csproj.CoreCompileInputs.cache
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/bin/Debug/net6.0/JeuxConsole
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/bin/Debug/net6.0/JeuxConsole.deps.json
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/bin/Debug/net6.0/JeuxConsole.runtimeconfig.json
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/bin/Debug/net6.0/JeuxConsole.dll
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/bin/Debug/net6.0/JeuxConsole.pdb
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/JeuxConsole.dll
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/refint/JeuxConsole.dll
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/JeuxConsole.pdb
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/JeuxConsole.genruntimeconfig.cache
+/Users/julienhanon/Documents/Isitech/C#/JeuxConsole/obj/Debug/net6.0/ref/JeuxConsole.dll
