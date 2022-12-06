@@ -4,14 +4,14 @@ namespace Pendu
 {
     class Game
     {
-        public List<char> GoodGuess; // Liste des Lettres trouvé
-        public bool EndGame; // Si vrai alors la partie est gagné 
-        public bool QuitGame; // Si vrai alors on quitte l'application
+        private List<char> GoodGuess; // Liste des Lettres trouvé
+        private bool EndGame; // Si vrai alors la partie est gagné 
+        private bool QuitGame; // Si vrai alors on quitte l'application
         public int NbError; // Nombre de faute
         ArrayList Words = new ArrayList(); //Création d'une liste de mot possible
-        public string CurrentWord; // Affiche la mot que l'utilisateur est en train de deviner
+        private string CurrentWord; // Affiche la mot que l'utilisateur est en train de deviner
 
-        public void Play(int ErrorLeft, ArrayList Words)
+        private void Play(int ErrorLeft, ArrayList Words)
         {
             //On initialise nos variable 
             EndGame = false;
@@ -70,7 +70,7 @@ namespace Pendu
             }
         }
         //Fonction qui retourne le mot que l'utilisateur est en train de deviner
-        public string DisplayWordtoGuess(string WordToGuess)
+        private string DisplayWordtoGuess(string WordToGuess)
         {
             string currentWordGuessed = "";
             // pour chaque lettre dans le mot a deviner on verifie si elle 
