@@ -5,16 +5,17 @@ namespace Pendu
     class Game
     {
         public List<char> GoodGuess; // Liste des Lettres trouvé
-        public bool isWin; // Si vrai alors la partie est gagné 
-        public bool quitGame; // Si vrai alors on quitte l'application
-        public int nbError; // Nombre de faute
+        public bool EndGame; // Si vrai alors la partie est gagné 
+        public bool QuitGame; // Si vrai alors on quitte l'application
+        public int NbError; // Nombre de faute
         ArrayList Words = new ArrayList(); //Création d'une liste de mot possible
-        //List<Words> WordList = new List<Words>(); 
-        public string currentWord;
+        
+        public string CurrentWord; // Affiche la mot que l'utilisateur est en train de deviner
 
         public void Play(int ErrorLeft, ArrayList Words)
         {
-            isWin = false;
+            //On initialise nos variable 
+            EndGame = false;
             GoodGuess = new List<char>();
             // On selectionne un Mot Aleatoire parmi la liste donner 
             Random rnd = new Random();
@@ -22,9 +23,10 @@ namespace Pendu
             string WordToGuess = Words[index].ToString();
             WordToGuess = WordToGuess.ToUpper();
             Console.WriteLine("Le mot à deviner contient {0} lettres", WordToGuess.Length);
-            while (!isWin)
+
+            while (!EndGame)
             {
-                Console.WriteLine("Nombre d'erreur : {0}", nbError);
+                Console.WriteLine("Nombre d'erreur : {0}", NbError);
                 Console.WriteLine("Veuillez rentrer une lettre :");
 
                 char Lettre = char.ToUpper(Console.ReadKey(true).KeyChar); //on recupere l'input du clavier
@@ -35,7 +37,7 @@ namespace Pendu
                 if(result == -1)
                 {
                     Console.WriteLine("La lettre {0} est fausse", Lettre);
-                    nbError ++;
+                    NbError ++;
                 }
                 else if (result >= 0)
                 {
@@ -54,13 +56,13 @@ namespace Pendu
                 if (currentWord.IndexOf('_') == -1)
                 {
                     Console.WriteLine("Bravo vous avez trouvé !");
-                    isWin = true;
+                    EndGame = true;
                 }
 
-                if (nbError == ErrorLeft)
+                if (NbError == ErrorLeft)
                 {
                     Console.WriteLine("Perdu ! Le mot était : {0}", WordToGuess);
-                    isWin = true;
+                    EndGame = true;
                 }
                 
             }
@@ -80,6 +82,7 @@ namespace Pendu
                 }
 
             }
+            Console.WriteLine();
             Console.WriteLine(currentWordGuessed);
             Console.WriteLine();
 
@@ -87,7 +90,7 @@ namespace Pendu
         }
         public void StartGame()
         {
-            while(!quitGame)
+            while(!QuitGame)
             {
                 Console.WriteLine("Bienvenue dans le jeu du Pendu !");
                 Console.WriteLine("Séléctionner une difficultés");
@@ -103,24 +106,24 @@ namespace Pendu
                         Words.Add("Gourde");
                         Words.Add("Soleil");
                         Words.Add("Ecran");
-                        Console.WriteLine("Vous avez selectionné Facile");
+                        Console.WriteLine("Vous avez selectionné Facile, vous disposez de 15 erreurs");
                         Play(15, Words);
                         break;
                 case 'é': 
                         Words.Add("Programmation");
                         Words.Add("Calopsitte");
-                        Console.WriteLine("Vous avez selectionné Medium");
+                        Console.WriteLine("Vous avez selectionné Medium, vous disposez de 10 erreurs");
                         Play(10, Words);
                         break;
                     case '"': 
                         Words.Add("Hippopotomonstrosesquipedaliophobie");
                         Words.Add("Hexakosioihexekontahexaphobie");
-                        Console.WriteLine("Vous avez selectionné Difficile");
+                        Console.WriteLine("Vous avez selectionné Difficile, vous disposez de 7 erreurs");
                         Play(7, Words);
                         break;
                     default : 
                         Console.WriteLine("Au revoir !");
-                        quitGame = true;
+                        QuitGame = true;
                         break;
                 }
             }
